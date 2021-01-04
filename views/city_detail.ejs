@@ -1,0 +1,66 @@
+<h1>All City Details</h1>
+<style>
+    .nostyle {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    li{
+        line-height: 200%;
+    }
+
+    .bordered {
+        border: 1px solid black;
+        padding: 2px;
+    }
+</style>
+<div>
+    <ul class="nostyle">
+        <li>
+            City Code: <span class="bordered">
+                <%= result.cty_code %>
+            </span>
+        </li>
+        <li>
+            City Name: <span class="bordered">
+                <%= result.cty_name %>
+            </span>
+        </li>
+        <li>
+            City Population: <span class="bordered">
+                <%= result.population %>
+            </span>
+        </li>
+        <li>
+            By the Sea: <span class="bordered">
+                <%= result.isCoastal %>
+            </span>
+        </li>
+        <li>
+            Area (KM): <span class="bordered">
+                <%= result.areaKM %>
+            </span>
+        </li>
+    </ul>
+</div>
+
+<div style="margin-top: 25px;margin-bottom: 10px;">
+    <ul class="nostyle">
+        <li>
+            Country Code: <span class="bordered">
+                <%= result.co_code %>
+            </span>
+          
+        </li>
+        <li>
+            Country Name: <span class="bordered">
+                <%= result.co_name %>
+            </span>
+        </li>
+
+    </ul>
+</div>
+
+
+<a href="/">Home</a>

@@ -1,0 +1,33 @@
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid black;
+    }
+</style>
+<h1>Countries</h1>
+<p><a href="/countries/add"><button>Add Country</button></a></p>
+<table>
+    <thead>
+        <tr>
+            <th>Country Code</th>
+            <th>Country Name</th>
+            <th>Country Detail</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% for(var i = 0; i< results.length; i++) {%>
+            <tr>
+                <td><%= results[i].co_code %></td>
+                <td><%= results[i].co_name %></td>
+                <td><%= results[i].co_details %></td>
+                <td><a href="/countries/<%= results[i].co_code %>/update">Update</a></td>
+                <td><a href="/countries/<%= results[i].co_code %>/delete">Delete</a></td>
+                
+            </tr>
+         <% } %>
+    </tbody>
+</table>
+
+<a href="/">Home</a>

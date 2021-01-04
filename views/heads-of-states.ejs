@@ -1,0 +1,28 @@
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid black;
+    }
+</style>
+<h1>Heads of State</h1>
+<p><a href="/heads-of-states/add"><button>Add Head of State</button></a></p>
+<table>
+    <thead>
+        <tr>
+            <th>Country Code</th>
+            <th>Head of State</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% for(var i = 0; i< results.length; i++) {%>
+            <tr>
+                <td><%= results[i]._id %></td>
+                <td><%= results[i].headOfState %></td>
+                
+            </tr>
+         <% } %>
+    </tbody>
+</table>
+
+<a href="/">Home</a>

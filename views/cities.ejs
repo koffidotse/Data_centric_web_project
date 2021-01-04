@@ -1,0 +1,37 @@
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid black;
+    }
+</style>
+<h1>Cities</h1>
+<table>
+    <thead>
+        <tr>
+            <th>City Code</th>
+            <th>Country Code</th>
+            <th>City Name</th>
+            <th>Population</th>
+            <th>By the Sea</th>
+            <th>Area</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% for(var i = 0; i< results.length; i++) {%>
+            <tr>
+                <td><%= results[i].cty_code %></td>
+                <td><%= results[i].co_code %></td>
+                <td><%= results[i].cty_name %></td>
+                <td><%= results[i].population %></td>
+                <td><%= results[i].isCoastal %></td>
+                <td><%= results[i].areaKM %></td>
+                <td><a href="/cities/<%= results[i].cty_code %>">All Details</a></td>
+                
+            </tr>
+         <% } %>
+    </tbody>
+</table>
+
+<a href="/">Home</a>

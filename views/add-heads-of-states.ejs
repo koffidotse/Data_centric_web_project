@@ -1,0 +1,57 @@
+<h1>Add Head of State</h1>
+<style>
+    .nostyle {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    li {
+        line-height: 200%;
+    }
+
+    .bordered {
+        border: 1px solid black;
+        padding: 2px;
+    }
+
+    .form-div {
+        margin-top: 10px;
+    }
+
+    .error{
+        margin-bottom: 10px;
+        color: red;
+        font-weight: bold;
+    }
+</style>
+
+<div class="error">
+    <ul class="nostyle">
+        <% for(var i = 0; i< errors.length; i++) {%>
+            <li><%= errors[i] %></li>
+         <% } %>
+    </ul>
+
+</div>
+
+<div>
+    <form action="add" method="post">
+        <div class="form-div">
+            <label for="co_code">Country Code</label>
+            <input type="text" id="co_code" name="co_code" required>
+        </div>
+        <div class="form-div">
+            <label for="head_of_state">Head of State</label>
+            <input name="head_of_state" id="head_of_state">
+        </div>
+        <div class="form-div" style="margin-left: 30px;">
+            <button type="submit">Add</button>
+        </div>
+    </form>
+
+</div>
+
+
+
+<a class="form-div" href="/">Home</a>
